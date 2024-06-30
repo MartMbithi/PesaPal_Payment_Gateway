@@ -64,3 +64,54 @@
  *   TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED THE LICENSE FEE PAID BY YOU, IF ANY.
  *
  */
+?>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Pesapal API Example</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/checkout.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="checkout.css" rel="stylesheet">
+</head>
+
+<body class="bg-body-tertiary">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                <h2>Success, Your Order Has Been Paid</h2>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+            <p class="mb-1">&copy; 2017–2024 Company Name</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/checkout.js"></script>
+</body>
+
+</html>

@@ -55,6 +55,7 @@ if($pesapalNotification=="CHANGE" && $pesapalTrackingId!='')
    curl_close ($ch);
    
    //UPDATE YOUR DB TABLE WITH NEW STATUS FOR TRANSACTION WITH pesapal_transaction_tracking_id $pesapalTrackingId
+   
 
    if(DB_UPDATE_IS_SUCCESSFUL)
    {

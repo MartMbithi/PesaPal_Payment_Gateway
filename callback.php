@@ -64,6 +64,10 @@
  *   TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED THE LICENSE FEE PAID BY YOU, IF ANY.
  *
  */
+include('config.php');
+//Insert Into Orders
+$pesapal_transaction_tracking_id = $_GET['pesapal_transaction_tracking_id'];
+$order_merchant_ref = $_GET['pesapal_merchant_reference'];
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -95,20 +99,34 @@
 
     <div class="container">
         <main>
-            <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-                <h2>Success, Your Order Has Been Paid</h2>
-            </div>
-        </main>
+            <?php
 
-        <footer class="my-5 pt-5 text-body-secondary text-center text-small">
-            <p class="mb-1">&copy; 2017–2024 Company Name</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-        </footer>
+            //Persist
+            if (mysqli_query(
+                $mysqli,
+                "INSERT INTO test_order(order_txn_id, order_merchant_ref) VALUES('{$pesapal_transaction_tracking_id}', '{$order_merchant_ref}'"
+            )) {
+            ?>
+                <div class="py-5 text-center">
+                    <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                    <h2>Success, Your Order Has Been Paid</h2>
+                </div>
+        </main>
+    <?php } else { ?>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h2>Failed, Please try again</h2>
+        </div>
+    <?php } ?>
+
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">&copy; 2017–2024 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
     </div>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/checkout.js"></script>

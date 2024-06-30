@@ -77,7 +77,7 @@ $mysqli = new mysqli($host, $dbuser, $dbpass, $db);
 /* Get API Keys */
 $api_configs = mysqli_query(
     $mysqli,
-    "SELECT * FROM settings WHERE id = 1"
+    "SELECT * FROM settings"
 );
 if (mysqli_num_rows($api_configs) > 0) {
     while ($api_config = mysqli_fetch_array($api_configs)) {

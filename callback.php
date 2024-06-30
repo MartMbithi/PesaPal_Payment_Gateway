@@ -104,18 +104,20 @@ $order_merchant_ref = $_GET['pesapal_merchant_reference'];
             //Persist
             if (mysqli_query(
                 $mysqli,
-                "INSERT INTO test_order(order_txn_id, order_merchant_ref) VALUES('{$pesapal_transaction_tracking_id}', '{$order_merchant_ref}'"
+                "INSERT INTO test_order(order_txn_id, order_merchant_ref) VALUES('{$pesapal_transaction_tracking_id}', '{$order_merchant_ref}')"
             )) {
             ?>
                 <div class="py-5 text-center">
                     <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                     <h2>Success, Your Order Has Been Paid</h2>
+                    <a href="index.php">Home</a>
                 </div>
         </main>
     <?php } else { ?>
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h2>Failed, Please try again</h2>
+            <a href="index.php">Home</a>
         </div>
     <?php } ?>
 
